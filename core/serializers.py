@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Cliente
+from .models import Pessoa
 
 # Serializers define the API representation.
-class ClienteSerializer(serializers.ModelSerializer):
+class PessoaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Cliente
-        fields = ['url', 'nome', 'endereco', 'idade']
+        model = Pessoa
+        fields = ['url', 'nomeCompleto', 'cpf', 'matricula']
